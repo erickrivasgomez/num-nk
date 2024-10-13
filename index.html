@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Numerología</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .accordion {
+            cursor: pointer;
+            padding: 10px;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            background-color: #eee;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            transition: background-color 0.4s ease;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ddd;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados de Numerología</h1>
+
+        <!-- Secciones desplegables para mostrar los resultados y descripciones de cada persona -->
+        <div id="accordionContainer"></div>
+
+    </div>
+
+    <!-- Carga del archivo JavaScript al final para evitar problemas de sincronización -->
+    <script src="script.js"></script>
+</body>
+</html>
