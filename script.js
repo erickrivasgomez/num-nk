@@ -1,350 +1,319 @@
-// Lista de personas y sus resultados de numerología precargados
-const people = [
-    {
-        fullName: "Angela Alicia Cortez Lemus",
-        essence: 7,
-        karma: 2,
-        divineGift: 0,
-        pastLives: 2000,
-        mission: 9,
-        obstacle: 9,
-        description: {
-            essence: "El número 7 en esencia indica una persona reflexiva, analítica y espiritual. Tienden a buscar la verdad más profunda y prefieren la soledad para alcanzar el entendimiento.",
-            karma: "El número 2 en karma indica que esta persona puede tener lecciones relacionadas con la cooperación, la paciencia y la sensibilidad hacia los demás.",
-            divineGift: "El número 0 en el regalo divino muestra un potencial ilimitado, una oportunidad para empezar de nuevo en cualquier área de su vida.",
-            pastLives: "El número 2000 en vidas pasadas indica un alma que ha experimentado grandes cambios y desafíos en la vida anterior, logrando una capacidad única para adaptarse.",
-            mission: "El número 9 en misión simboliza una vocación hacia el servicio humanitario, compasión y desinterés por los propios intereses.",
-            obstacle: "El número 9 como obstáculo indica que los principales desafíos pueden estar relacionados con la compasión desmedida o el sacrificio personal extremo."
+document.addEventListener("DOMContentLoaded", function () {
+    const people = [
+        {
+            "name": "Ángela Alicia Cortez Lemus",
+            "birthDate": "7/2/2000",
+            "esencia": 7,
+            "karma": 2,
+            "regaloDivino": 0,
+            "vidasPasadas": 2,
+            "mision": 2,
+            "obstaculo": 9
+        },
+        {
+            "name": "Aracely Valdés Gutierrez",
+            "birthDate": "18/4/1996",
+            "esencia": 9,
+            "karma": 4,
+            "regaloDivino": 6,
+            "vidasPasadas": 7,
+            "mision": 1,
+            "obstaculo": 4
+        },
+        {
+            "name": "Consuelo Mabel Vega Gonzalez",
+            "birthDate": "6/7/1996",
+            "esencia": 6,
+            "karma": 7,
+            "regaloDivino": 6,
+            "vidasPasadas": 7,
+            "mision": 11,
+            "obstaculo": 4
+        },
+        {
+            "name": "Elizabeth Arreola Mondragón",
+            "birthDate": "18/4/1980",
+            "esencia": 9,
+            "karma": 4,
+            "regaloDivino": 8,
+            "vidasPasadas": 9,
+            "mision": 3,
+            "obstaculo": 4
+        },
+        {
+            "name": "Magdalena Sánchez Molinero",
+            "birthDate": "12/11/1963",
+            "esencia": 3,
+            "karma": 11,
+            "regaloDivino": 3,
+            "vidasPasadas": 2,
+            "mision": 7,
+            "obstaculo": 5
+        },
+        {
+            "name": "Magdalena Vidales Sánchez",
+            "birthDate": "3/9/2000",
+            "esencia": 3,
+            "karma": 9,
+            "regaloDivino": 0,
+            "vidasPasadas": 2,
+            "mision": 5,
+            "obstaculo": 3
+        },
+        {
+            "name": "María de la Salud Solórzano Villalón",
+            "birthDate": "30/7/1994",
+            "esencia": 3,
+            "karma": 7,
+            "regaloDivino": 4,
+            "vidasPasadas": 5,
+            "mision": 8,
+            "obstaculo": 1
+        },
+        {
+            "name": "María Fernanda Infante Soria",
+            "birthDate": "11/1/1999",
+            "esencia": 11,
+            "karma": 1,
+            "regaloDivino": 9,
+            "vidasPasadas": 2,
+            "mision": 4,
+            "obstaculo": 3
+        },
+        {
+            "name": "María Guadalupe Gomez Herrera",
+            "birthDate": "18/9/1993",
+            "esencia": 9,
+            "karma": 9,
+            "regaloDivino": 3,
+            "vidasPasadas": 4,
+            "mision": 5,
+            "obstaculo": 9
+        },
+        {
+            "name": "Martha Alicia Cortes Rodriguez",
+            "birthDate": "22/4/1964",
+            "esencia": 22,
+            "karma": 4,
+            "regaloDivino": 10,
+            "vidasPasadas": 2,
+            "mision": 5,
+            "obstaculo": 8
+        },
+        {
+            "name": "Miriam Graciela Sánchez Rocha",
+            "birthDate": "5/10/1974",
+            "esencia": 5,
+            "karma": 1,
+            "regaloDivino": 11,
+            "vidasPasadas": 3,
+            "mision": 9,
+            "obstaculo": 6
+        },
+        {
+            "name": "Mónica Reyes Gomez",
+            "birthDate": "25/11/1997",
+            "esencia": 7,
+            "karma": 11,
+            "regaloDivino": 7,
+            "vidasPasadas": 8,
+            "mision": 5,
+            "obstaculo": 9
+        },
+        {
+            "name": "Nancy Karina Sánchez Villalón",
+            "birthDate": "28/11/1996",
+            "esencia": 1,
+            "karma": 11,
+            "regaloDivino": 6,
+            "vidasPasadas": 7,
+            "mision": 6,
+            "obstaculo": 3
+        },
+        {
+            "name": "Rebeca Sofía Espinal Cortes",
+            "birthDate": "30/6/1996",
+            "esencia": 3,
+            "karma": 6,
+            "regaloDivino": 6,
+            "vidasPasadas": 7,
+            "mision": 4,
+            "obstaculo": 9
+        },
+        {
+            "name": "Reyna Curintzita Ramos",
+            "birthDate": "25/8/1976",
+            "esencia": 7,
+            "karma": 8,
+            "regaloDivino": 4,
+            "vidasPasadas": 3,
+            "mision": 5,
+            "obstaculo": 9
+        },
+        {
+            "name": "Rosa María Villalón Martinez del Campo",
+            "birthDate": "7/3/1968",
+            "esencia": 7,
+            "karma": 3,
+            "regaloDivino": 8,
+            "vidasPasadas": 2,
+            "mision": 3,
+            "obstaculo": 1
+        },
+        {
+            "name": "Sandra Lourdes Nuñez Rodriguez",
+            "birthDate": "29/2/1987",
+            "esencia": 2,
+            "karma": 2,
+            "regaloDivino": 7,
+            "vidasPasadas": 8,
+            "mision": 9,
+            "obstaculo": 4
+        },
+        {
+            "name": "Verónica Gomez García",
+            "birthDate": "2/1/1975",
+            "esencia": 2,
+            "karma": 1,
+            "regaloDivino": 5,
+            "vidasPasadas": 6,
+            "mision": 9,
+            "obstaculo": 3
         }
-    },
-    {
-        fullName: "Aracely Valdés Gutierrez",
-        essence: 9,
-        karma: 4,
-        divineGift: 6,
-        pastLives: 1996,
-        mission: 11,
-        obstacle: 4,
-        description: {
-            essence: "El número 9 en esencia representa una persona humanitaria, con una gran compasión y deseo de ayudar a los demás.",
-            karma: "El número 4 en karma sugiere que esta persona debe trabajar en la estabilidad, la disciplina y el establecimiento de bases sólidas en su vida.",
-            divineGift: "El número 6 en el regalo divino muestra una inclinación natural hacia la responsabilidad y el cuidado de los demás, especialmente de la familia.",
-            pastLives: "El número 1996 en vidas pasadas revela una persona que ha desarrollado cualidades de responsabilidad y organización en vidas anteriores.",
-            mission: "El número 11 en misión es un número maestro que representa intuición, iluminación y liderazgo espiritual.",
-            obstacle: "El número 4 como obstáculo indica que los mayores desafíos podrían estar relacionados con la rigidez o la dificultad para adaptarse al cambio."
-        }
-    },
-    {
-        fullName: "Consuelo Mabel Vega Gonzalez",
-        essence: 6,
-        karma: 7,
-        divineGift: 6,
-        pastLives: 1996,
-        mission: 12,
-        obstacle: 13,
-        description: {
-            essence: "El número 6 en esencia representa una persona responsable, preocupada por el bienestar de los demás y con un fuerte sentido de comunidad.",
-            karma: "El número 7 en karma indica la necesidad de desarrollar la intuición, la introspección y la fe.",
-            divineGift: "El número 6 en el regalo divino sugiere que esta persona tiene un talento innato para cuidar a los demás y para crear ambientes armoniosos.",
-            pastLives: "El número 1996 en vidas pasadas revela una experiencia de vida orientada al cuidado de la familia o comunidad.",
-            mission: "El número 12 en misión implica un papel en la enseñanza o en la transmisión de valores elevados.",
-            obstacle: "El número 13 como obstáculo muestra que puede haber lecciones relacionadas con el trabajo duro y la transformación personal."
-        }
-    },
-    {
-        fullName: "Elizabeth Arreola Mondragón",
-        essence: 9,
-        karma: 4,
-        divineGift: 2,
-        pastLives: 1980,
-        mission: 5,
-        obstacle: 13,
-        description: {
-            essence: "El número 9 en esencia simboliza una personalidad humanitaria y orientada al servicio desinteresado hacia los demás.",
-            karma: "El número 4 en karma indica la necesidad de desarrollar estabilidad y bases sólidas en la vida.",
-            divineGift: "El número 2 en el regalo divino refleja cualidades de cooperación, diplomacia y armonía.",
-            pastLives: "El número 1980 sugiere que la persona tiene experiencia en relaciones interpersonales y el manejo de conflictos.",
-            mission: "El número 5 en misión indica que la vida de esta persona está marcada por cambios y adaptabilidad.",
-            obstacle: "El número 13 como obstáculo indica que los retos pueden estar relacionados con la disciplina y el trabajo."
-        }
-    },
-    {
-        fullName: "Magdalena Sánchez Molinero",
-        essence: 3,
-        karma: 11,
-        divineGift: 3,
-        pastLives: 1963,
-        mission: 4,
-        obstacle: 14,
-        description: {
-            essence: "El número 3 en esencia muestra una persona creativa, expresiva y comunicativa.",
-            karma: "El número 11 en karma indica que esta persona debe desarrollar una intuición aguda y habilidades espirituales.",
-            divineGift: "El número 3 en el regalo divino sugiere que esta persona posee un talento natural para la comunicación y la expresión creativa.",
-            pastLives: "El número 1963 sugiere una vida anterior orientada a la estructura y a las responsabilidades organizacionales.",
-            mission: "El número 4 en misión indica que esta persona debe enfocarse en la construcción de una base sólida y en el trabajo disciplinado.",
-            obstacle: "El número 14 como obstáculo puede indicar retos relacionados con la autodisciplina y la necesidad de cambiar ciertos patrones."
-        }
-    },
-    {
-        fullName: "Magdalena Vidales Sánchez",
-        essence: 3,
-        karma: 9,
-        divineGift: 2,
-        pastLives: 2000,
-        mission: 6,
-        obstacle: 12,
-        description: {
-            essence: "El número 3 en esencia representa a una persona con una fuerte energía creativa y habilidades de comunicación.",
-            karma: "El número 9 en karma implica lecciones relacionadas con la compasión y el servicio a los demás.",
-            divineGift: "El número 2 en el regalo divino muestra que esta persona tiene una habilidad innata para la diplomacia y la mediación.",
-            pastLives: "El número 2000 refleja una vida anterior enfocada en el equilibrio emocional y las relaciones.",
-            mission: "El número 6 en misión indica una vida de servicio hacia la familia y la comunidad.",
-            obstacle: "El número 12 como obstáculo indica que puede haber lecciones relacionadas con el autosacrificio y la sobrecarga emocional."
-        }
-    },
+    ];
 
-    {
-        fullName: "María de la Salud Solórzano Villalón",
-        essence: 3,
-        karma: 7,
-        divineGift: 4,
-        pastLives: 1994,
-        mission: 6,
-        obstacle: 10,
-        description: {
-            essence: "El número 3 en esencia simboliza una persona con una gran capacidad creativa, sociable y expresiva.",
-            karma: "El número 7 en karma indica que debe trabajar en su vida interior, desarrollando sabiduría y paciencia.",
-            divineGift: "El número 4 en el regalo divino muestra habilidades naturales para organizar, construir y crear estructuras sólidas.",
-            pastLives: "El número 1994 sugiere un alma que ha trabajado para encontrar equilibrio entre lo material y lo espiritual.",
-            mission: "El número 6 en misión indica que la persona está llamada a ayudar a otros, particularmente en un ambiente familiar o comunitario.",
-            obstacle: "El número 10 como obstáculo implica desafíos relacionados con la independencia y la autoafirmación."
-        }
-    },
-    {
-        fullName: "María Fernanda Infante Soria",
-        essence: 11,
-        karma: 1,
-        divineGift: 9,
-        pastLives: 1999,
-        mission: 12,
-        obstacle: 12,
-        description: {
-            essence: "El número 11 es un número maestro, que representa una persona intuitiva, visionaria y espiritual.",
-            karma: "El número 1 en karma indica que debe aprender a ser líder, a confiar en sí misma y tomar la iniciativa.",
-            divineGift: "El número 9 en regalo divino muestra un fuerte sentido de compasión y desinterés personal.",
-            pastLives: "El número 1999 refleja una vida pasada marcada por una búsqueda profunda de sabiduría y sentido espiritual.",
-            mission: "El número 12 en misión indica que su vida está destinada a la enseñanza y la inspiración.",
-            obstacle: "El número 12 como obstáculo puede señalar desafíos en cuanto a sacrificios o dificultades para poner límites."
-        }
-    },
-    {
-        fullName: "María Guadalupe Gomez Herrera",
-        essence: 9,
-        karma: 9,
-        divineGift: 3,
-        pastLives: 1993,
-        mission: 22,
-        obstacle: 18,
-        description: {
-            essence: "El número 9 en esencia indica a una persona altruista, humanitaria y con un fuerte deseo de ayudar a otros.",
-            karma: "El número 9 en karma señala lecciones relacionadas con la compasión y el servicio desinteresado.",
-            divineGift: "El número 3 en regalo divino muestra habilidades innatas para la comunicación y la creatividad.",
-            pastLives: "El número 1993 sugiere una vida dedicada a la búsqueda de ideales más elevados.",
-            mission: "El número 22 en misión indica un rol como constructor maestro, alguien que puede lograr grandes cosas en el mundo material.",
-            obstacle: "El número 18 como obstáculo implica lecciones importantes en torno al poder personal y las emociones profundas."
-        }
-    },
-    {
-        fullName: "Martha Alicia Cortes Rodriguez",
-        essence: 4,
-        karma: 4,
-        divineGift: 6,
-        pastLives: 1964,
-        mission: 8,
-        obstacle: 8,
-        description: {
-            essence: "El número 4 en esencia muestra a una persona práctica, estable y trabajadora.",
-            karma: "El número 4 en karma indica que esta persona debe aprender lecciones de disciplina y constancia.",
-            divineGift: "El número 6 en regalo divino refleja cualidades innatas para cuidar a otros y construir relaciones armónicas.",
-            pastLives: "El número 1964 indica una vida pasada marcada por la necesidad de estructurar y organizar.",
-            mission: "El número 8 en misión señala una vocación para lograr poder y éxito en el ámbito material.",
-            obstacle: "El número 8 como obstáculo implica desafíos relacionados con el control y el manejo del poder."
-        }
-    },
-    {
-        fullName: "Miriam Graciela Sánchez Rocha",
-        essence: 5,
-        karma: 1,
-        divineGift: 4,
-        pastLives: 1974,
-        mission: 7,
-        obstacle: 6,
-        description: {
-            essence: "El número 5 en esencia simboliza una personalidad aventurera, libre y llena de curiosidad.",
-            karma: "El número 1 en karma señala lecciones de liderazgo y autoconfianza.",
-            divineGift: "El número 4 en regalo divino muestra habilidades innatas para crear estabilidad y orden.",
-            pastLives: "El número 1974 refleja una vida dedicada a equilibrar el trabajo duro con el deseo de libertad.",
-            mission: "El número 7 en misión indica una búsqueda de conocimiento profundo y desarrollo espiritual.",
-            obstacle: "El número 6 como obstáculo señala que puede haber desafíos relacionados con las responsabilidades familiares o el autocuidado."
-        }
-    },
-    {
-        fullName: "Mónica Reyes Gomez",
-        essence: 7,
-        karma: 2,
-        divineGift: 9,
-        pastLives: 1997,
-        mission: 8,
-        obstacle: 9,
-        description: {
-            essence: "El número 7 en esencia indica una persona introspectiva, espiritual y analítica.",
-            karma: "El número 2 en karma sugiere lecciones sobre la cooperación y la sensibilidad hacia los demás.",
-            divineGift: "El número 9 en regalo divino muestra un talento para el servicio humanitario y la compasión.",
-            pastLives: "El número 1997 indica una vida dedicada al servicio y la ayuda a otros.",
-            mission: "El número 8 en misión señala que esta persona tiene un destino relacionado con la ambición y el éxito material.",
-            obstacle: "El número 9 como obstáculo indica que los desafíos pueden estar relacionados con el sacrificio excesivo o la falta de límites personales."
-        }
-    },
-    {
-        fullName: "Nancy Karina Sánchez Villalón",
-        essence: 9,
-        karma: 11,
-        divineGift: 6,
-        pastLives: 1996,
-        mission: 8,
-        obstacle: 2,
-        description: {
-            essence: "El número 9 en esencia representa a una persona con gran compasión y deseo de servir a los demás.",
-            karma: "El número 11 en karma es un número maestro que indica lecciones espirituales profundas.",
-            divineGift: "El número 6 en regalo divino muestra un talento innato para cuidar y proteger a los demás.",
-            pastLives: "El número 1996 refleja una vida de responsabilidad y trabajo duro.",
-            mission: "El número 8 en misión indica un camino hacia el poder y el éxito en el ámbito material.",
-            obstacle: "El número 2 como obstáculo indica desafíos en torno a la dependencia emocional y la necesidad de encontrar equilibrio en las relaciones."
-        }
-    },
-    {
-        fullName: "Rebeca Sofía Espinal Cortes",
-        essence: 3,
-        karma: 6,
-        divineGift: 5,
-        pastLives: 1996,
-        mission: 4,
-        obstacle: 9,
-        description: {
-            essence: "El número 3 en esencia representa una personalidad creativa, comunicativa y sociable.",
-            karma: "El número 6 en karma señala lecciones relacionadas con la responsabilidad y el cuidado de los demás.",
-            divineGift: "El número 5 en regalo divino muestra una inclinación natural hacia la libertad y la aventura.",
-            pastLives: "El número 1996 indica que la persona ha trabajado en construir y cuidar de los demás en vidas anteriores.",
-            mission: "El número 4 en misión indica que debe enfocarse en la construcción de una vida estable y estructurada.",
-            obstacle: "El número 9 como obstáculo señala que los desafíos pueden estar relacionados con el exceso de sacrificio o la falta de límites."
-        }
-    },
-    {
-        fullName: "Reyna Curintzita Ramos",
-        essence: 25,
-        karma: 8,
-        divineGift: 7,
-        pastLives: 1976,
-        mission: 9,
-        obstacle: 8,
-        description: {
-            essence: "El número 25 en esencia representa una combinación de reflexión profunda y ambición práctica.",
-            karma: "El número 8 en karma señala lecciones relacionadas con el poder y la autoridad.",
-            divineGift: "El número 7 en regalo divino muestra habilidades naturales para la introspección y la búsqueda espiritual.",
-            pastLives: "El número 1976 indica una vida marcada por la búsqueda de equilibrio entre lo material y lo espiritual.",
-            mission: "El número 9 en misión señala una vida orientada al servicio humanitario y la compasión.",
-            obstacle: "El número 8 como obstáculo indica que puede haber desafíos relacionados con el manejo del poder o el control."
-        }
-    },
-    {
-        fullName: "Rosa María Villalón Martinez del Campo",
-        essence: 7,
-        karma: 3,
-        divineGift: 5,
-        pastLives: 1968,
-        mission: 7,
-        obstacle: 10,
-        description: {
-            essence: "El número 7 en esencia refleja una persona introspectiva, analítica y con una fuerte inclinación espiritual.",
-            karma: "El número 3 en karma indica lecciones relacionadas con la autoexpresión y el optimismo.",
-            divineGift: "El número 5 en regalo divino muestra una inclinación natural hacia la libertad, la adaptabilidad y el cambio.",
-            pastLives: "El número 1968 sugiere que esta persona ha trabajado para equilibrar la independencia y la estructura en vidas anteriores.",
-            mission: "El número 7 en misión indica un camino de búsqueda espiritual y desarrollo de sabiduría interna.",
-            obstacle: "El número 10 como obstáculo implica desafíos en cuanto a liderazgo, independencia y autoconfianza."
-        }
-    },
-    {
-        fullName: "Sandra Lourdes Nuñez Rodriguez",
-        essence: 2,
-        karma: 2,
-        divineGift: 7,
-        pastLives: 1987,
-        mission: 10,
-        obstacle: 4,
-        description: {
-            essence: "El número 2 en esencia representa una persona sensible, cooperativa y orientada a las relaciones personales.",
-            karma: "El número 2 en karma sugiere lecciones de cooperación, paciencia y diplomacia.",
-            divineGift: "El número 7 en regalo divino muestra un talento natural para la introspección y el pensamiento profundo.",
-            pastLives: "El número 1987 refleja una vida pasada marcada por un equilibrio entre la ambición y el deseo de conocimiento.",
-            mission: "El número 10 en misión indica un destino orientado hacia el liderazgo y la realización personal.",
-            obstacle: "El número 4 como obstáculo señala que los desafíos pueden estar relacionados con la estabilidad y el orden en la vida."
-        }
-    },
-    {
-        fullName: "Verónica Gomez García",
-        essence: 2,
-        karma: 1,
-        divineGift: 5,
-        pastLives: 1975,
-        mission: 6,
-        obstacle: 3,
-        description: {
-            essence: "El número 2 en esencia simboliza una persona sensible y orientada hacia la colaboración y las relaciones armoniosas.",
-            karma: "El número 1 en karma indica lecciones relacionadas con la independencia, la autoconfianza y el liderazgo.",
-            divineGift: "El número 5 en regalo divino muestra una inclinación natural hacia la libertad, el cambio y la adaptabilidad.",
-            pastLives: "El número 1975 sugiere una vida marcada por el equilibrio entre la libertad personal y las responsabilidades.",
-            mission: "El número 6 en misión indica un camino orientado hacia el servicio a los demás, especialmente en el contexto familiar.",
-            obstacle: "El número 3 como obstáculo implica desafíos en la autoexpresión y en el manejo de las emociones."
-        }
-    }
 
-];
+    // Descripciones para cada aspecto de numerología
+    const esenciaDescriptions = {
+        1: "Tu esencia es la de un líder nato, con enfoque en la independencia y autosuficiencia. Te esfuerzas por destacar en todo lo que haces.",
+        2: "Tu esencia refleja una naturaleza pacífica y cooperativa, buscando siempre la armonía en tus relaciones y ambientes.",
+        3: "La creatividad y la autoexpresión forman el núcleo de tu esencia. Tienes un espíritu optimista y expresivo.",
+        4: "Tu esencia está basada en la estabilidad y el trabajo duro. Eres organizado y perseverante en la búsqueda de tus metas.",
+        5: "Eres alguien aventurero, con un deseo constante de cambio y nuevas experiencias. Tu esencia es la libertad.",
+        6: "Tu esencia está marcada por el cuidado y la responsabilidad, siempre buscando proteger y servir a los demás.",
+        7: "Tu esencia es profunda y reflexiva. Buscas respuestas espirituales y tiendes a ser introspectivo.",
+        8: "Eres una persona ambiciosa y orientada al éxito, con una gran habilidad para gestionar responsabilidades.",
+        9: "Tu esencia es compasiva y humanitaria. Buscas ayudar a otros y mejorar el mundo.",
+        10: "El número 10 simboliza la rueda de la vida, un ciclo completo. Tu esencia está en la transformación constante y el renacimiento.",
+        11: "El 11 es un número maestro. Tu esencia está conectada a la intuición y a una visión espiritual elevada.",
+        22: "El número maestro 22 te da una esencia de construcción poderosa, capaz de convertir sueños en realidad a gran escala.",
+        33: "El número maestro 33 es la esencia de un maestro espiritual. Eres compasivo y estás aquí para enseñar amor incondicional."
+    };
 
-// Función que genera las secciones desplegables con la información de cada persona
-function loadAccordion() {
-    const container = document.getElementById('accordionContainer');
+    const karmaDescriptions = {
+        1: "El karma del número 1 te invita a desarrollar independencia y confianza en ti mismo.",
+        2: "Tu karma está relacionado con aprender a cooperar y adaptarte a los demás, buscando la diplomacia.",
+        3: "Debes aprender a expresarte con claridad y autenticidad. La comunicación es clave para equilibrar tu karma.",
+        4: "El karma te lleva a construir bases sólidas y aprender la importancia del esfuerzo constante.",
+        5: "Tu karma está relacionado con la adaptación al cambio y encontrar el equilibrio entre libertad y responsabilidad.",
+        6: "Tienes que asumir responsabilidades en tu vida familiar o en la comunidad. El servicio es un aspecto clave de tu karma.",
+        7: "Debes profundizar en tu interior y aprender a confiar en tu intuición y sabiduría espiritual.",
+        8: "El karma te desafía a equilibrar el poder material con los valores espirituales y éticos.",
+        9: "Tu karma está ligado a la compasión y el servicio a los demás, siempre buscando el bien común.",
+        10: "Tu karma con el número 10 implica dominar el cambio constante y los ciclos en la vida.",
+        11: "El karma del número 11 te llama a desarrollar tu intuición y a seguir tu propósito espiritual más elevado.",
+        22: "Tu karma del 22 está en construir grandes cosas en esta vida, llevando a cabo misiones que ayuden a la humanidad.",
+        33: "El karma del número 33 implica vivir de acuerdo con los principios del amor incondicional y la enseñanza espiritual."
+    };
+
+    const regaloDivinoDescriptions = {
+        0: "El regalo divino del número 0 representa una conexión directa con lo infinito. Es una señal de potencial ilimitado.",
+        1: "Tu regalo divino es la capacidad de liderazgo y la fuerza interior para abrir caminos nuevos.",
+        2: "Tu regalo es la sensibilidad y la capacidad de trabajar bien con los demás.",
+        3: "El regalo divino del número 3 te otorga la habilidad de comunicarte creativamente y de alegrar a los demás.",
+        4: "Tu regalo divino es la disciplina y el enfoque en la construcción de bases duraderas.",
+        5: "El regalo divino del número 5 es la versatilidad, dándote facilidad para adaptarte a los cambios.",
+        6: "Tu regalo divino es un corazón compasivo y la habilidad para ayudar y nutrir a otros.",
+        7: "El regalo divino del número 7 te proporciona sabiduría interior y una profunda conexión espiritual.",
+        8: "Tu regalo divino es el poder de manifestar éxito material a través de esfuerzo y determinación.",
+        9: "El regalo divino del número 9 es un sentido profundo de compasión por el mundo y un fuerte deseo de servir.",
+        10: "Tu regalo divino es la habilidad de crear y cerrar ciclos de manera consciente y poderosa.",
+        11: "Tu regalo divino es la conexión con la intuición superior y el liderazgo espiritual.",
+        22: "El regalo del 22 es la capacidad de manifestar grandes sueños en la realidad y de construir estructuras duraderas.",
+        33: "El regalo divino del 33 es la capacidad de inspirar y enseñar a través del amor y el ejemplo."
+    };
+
+    const vidasPasadasDescriptions = {
+        1: "En vidas pasadas, desarrollaste un fuerte sentido de independencia y liderazgo.",
+        2: "Tus vidas pasadas te enseñaron sobre la importancia de la cooperación y la sensibilidad hacia los demás.",
+        3: "En vidas anteriores, experimentaste la autoexpresión creativa y el uso de la comunicación como herramienta.",
+        4: "Aprendiste a trabajar duro y a construir bases sólidas en tus vidas anteriores.",
+        5: "En vidas pasadas, experimentaste la libertad y el cambio constante, desarrollando adaptabilidad.",
+        6: "Tus vidas anteriores te enseñaron sobre la responsabilidad hacia la familia y la comunidad.",
+        7: "Desarrollaste una conexión profunda con lo espiritual y aprendiste a confiar en tu intuición.",
+        8: "En vidas anteriores, dominaste el éxito material y el poder, equilibrando estos con valores éticos.",
+        9: "Tus vidas pasadas están marcadas por el servicio y la compasión hacia los demás, buscando el bienestar de la humanidad.",
+        10: "En vidas pasadas, aprendiste a adaptarte a los ciclos del universo, entendiendo que todo cambia.",
+        11: "Tus vidas pasadas te conectaron con dimensiones espirituales superiores, buscando la iluminación.",
+        22: "En vidas anteriores, trabajaste en misiones importantes que cambiaron el curso de la humanidad.",
+        33: "En vidas pasadas, enseñaste y guiaste a otros, convirtiéndote en un maestro espiritual y faro de amor."
+    };
+
+    const misionDescriptions = {
+        1: "Tu misión en esta vida es liderar, tomar iniciativas y abrir caminos nuevos.",
+        2: "Tu misión es crear armonía y colaborar con los demás, siendo un mediador en conflictos.",
+        3: "La autoexpresión y la creatividad son clave en tu misión. Debes inspirar a otros a través de tu optimismo.",
+        4: "Tu misión es construir, organizar y mantener estabilidad en tu vida y la de los demás.",
+        5: "El cambio y la aventura están en tu misión. Debes aprender a adaptarte y ayudar a otros a hacer lo mismo.",
+        6: "Tu misión es proteger y cuidar de los demás, ofreciendo apoyo emocional y práctico.",
+        7: "Tienes una misión de búsqueda espiritual, de sabiduría interna y de guía para los demás.",
+        8: "Tu misión es alcanzar el éxito material, pero siempre con responsabilidad y ética.",
+        9: "Tu misión es servir a la humanidad y utilizar tu compasión para mejorar el mundo.",
+        10: "Tu misión es adaptarte a los ciclos de la vida y guiar a otros a través de los cambios.",
+        11: "Tu misión es iluminar a los demás, usando tu intuición para guiarlos hacia una visión más elevada.",
+        22: "Tu misión es construir grandes cosas que tengan un impacto duradero en la sociedad.",
+        33: "Tu misión es enseñar a través del ejemplo y el amor incondicional, siendo un faro de inspiración espiritual."
+    };
+
+    const obstaculoDescriptions = [
+        "Obstáculo de potencial no realizado. Puede enfrentar desafíos para descubrir y manifestar su verdadero potencial, sintiéndose a menudo perdido o sin dirección.",
+        "Obstáculo de liderazgo y autoafirmación. Puede enfrentar desafíos para tomar la iniciativa y ser asertivo, a menudo dudando de su capacidad para liderar.",
+        "Obstáculo de cooperación y sensibilidad. Puede tener dificultades para trabajar en equipo y ser demasiado sensible a las críticas, lo que afecta sus relaciones.",
+        "Obstáculo de expresión y creatividad. Puede encontrar problemas para expresarse de manera efectiva y liberar su creatividad, sintiéndose a menudo incomprendido.",
+        "Obstáculo de estabilidad y trabajo duro. Puede luchar con la necesidad de estructura y disciplina, encontrando difícil mantener la estabilidad en su vida.",
+        "Obstáculo de libertad y adaptabilidad. Puede tener problemas para adaptarse a los cambios y puede sentirse atrapado por la rutina, anhelando la libertad.",
+        "Obstáculo de responsabilidad y servicio. Puede enfrentar desafíos al asumir responsabilidades y ser de servicio a los demás, a menudo sintiéndose abrumado.",
+        "Obstáculo de introspección y análisis. Puede tener dificultades para confiar en su intuición y puede ser excesivamente crítico consigo mismo, lo que lleva a la parálisis por análisis.",
+        "Obstáculo de poder y materialismo. Puede luchar con el equilibrio entre el poder y la ética, y puede ser tentado por el materialismo, descuidando otros aspectos de la vida.",
+        "Obstáculo de compasión y humanitarismo. Puede tener problemas para dejar ir el pasado y puede sentirse abrumado por la necesidad de ayudar a los demás, a veces a costa de sí mismo.",
+        "Obstáculo de autoaceptación y confianza en uno mismo. Puede enfrentar desafíos para aceptarse a sí mismo tal como es y confiar en sus propias capacidades.",
+        "Obstáculo de intuición y espiritualidad. Puede tener dificultades para confiar en su intuición y puede sentirse desconectado de su espiritualidad, buscando respuestas externas.",
+        "Obstáculo de grandes logros y visión práctica. Puede luchar con la presión de alcanzar grandes metas y puede tener dificultades para convertir sus visiones en realidad práctica.",
+        "Obstáculo de amor incondicional y enseñanza. Puede enfrentar desafíos para ofrecer amor incondicional y puede sentirse abrumado por la responsabilidad de enseñar y guiar a otros."
+    ];
+
+    const cardsContainer = document.getElementById("cards-container");
 
     people.forEach(person => {
-        // Crear el botón de acordeón
-        const button = document.createElement('button');
-        button.classList.add('accordion');
-        button.textContent = person.fullName;
-        container.appendChild(button);
+        const card = document.createElement("div");
+        card.classList.add("card");
 
-        // Crear el panel que contiene los resultados de numerología y descripciones
-        const panel = document.createElement('div');
-        panel.classList.add('panel');
-        panel.innerHTML = `
-            <h3>Resultados:</h3>
-            <ul>
-                <li><strong>Esencia:</strong> ${person.essence} - ${person.description.essence}</li>
-                <li><strong>Karma:</strong> ${person.karma} - ${person.description.karma}</li>
-                <li><strong>Regalo Divino:</strong> ${person.divineGift} - ${person.description.divineGift}</li>
-                <li><strong>Vidas Pasadas:</strong> ${person.pastLives} - ${person.description.pastLives}</li>
-                <li><strong>Misión:</strong> ${person.mission} - ${person.description.mission}</li>
-                <li><strong>Obstáculo:</strong> ${person.obstacle} - ${person.description.obstacle}</li>
-            </ul>
-        `;
-        container.appendChild(panel);
-
-        // Lógica de abrir/cerrar el acordeón
-        button.addEventListener('click', function () {
-            this.classList.toggle('active');
-            const panel = this.nextElementSibling;
-            panel.style.display = panel.style.display === "block" ? "none" : "block";
+        const cardHeader = document.createElement("div");
+        cardHeader.classList.add("card-header");
+        cardHeader.textContent = person.name + " (" + person.birthDate + ")";
+        cardHeader.addEventListener("click", () => {
+            card.classList.toggle("active");
         });
-    });
-}
 
-// Cargar el acordeón automáticamente al cargar la página
-window.onload = loadAccordion;
+        const cardContent = document.createElement("div");
+        cardContent.classList.add("card-content");
+
+        const createParagraph = (label, number, descriptionArray) => {
+            const paragraph = document.createElement("p");
+            paragraph.innerHTML = `<strong>${label}:</strong> ${number} - ${descriptionArray[number] || "Sin descripción"}`;
+            return paragraph;
+        };
+
+        cardContent.appendChild(createParagraph("Esencia", person.esencia, esenciaDescriptions));
+        cardContent.appendChild(createParagraph("Karma", person.karma, karmaDescriptions));
+        cardContent.appendChild(createParagraph("Regalo Divino", person.regaloDivino, regaloDivinoDescriptions));
+        cardContent.appendChild(createParagraph("Vidas Pasadas", person.vidasPasadas, vidasPasadasDescriptions));
+        cardContent.appendChild(createParagraph("Misión", person.mision, misionDescriptions));
+        cardContent.appendChild(createParagraph("Obstáculo", person.obstaculo, obstaculoDescriptions));
+
+        card.appendChild(cardHeader);
+        card.appendChild(cardContent);
+
+        cardsContainer.appendChild(card);
+    });
+});
