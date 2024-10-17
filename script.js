@@ -41,6 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
             "obstaculo": 4
         },
         {
+            "name": "Hilda de la Torre Ponce",
+            "birthDate": "15/4/1972",
+            "esencia": 5,
+            "karma": 6,
+            "regaloDivino": 4,
+            "vidasPasadas": 10,
+            "mision": 2,
+            "obstaculo": 7
+        },
+        {
             "name": "Magdalena Sánchez Molinero",
             "birthDate": "12/11/1963",
             "esencia": 3,
@@ -284,36 +294,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const cardsContainer = document.getElementById("cards-container");
 
-    people.forEach(person => {
+    people.forEach((person, index) => {
         const card = document.createElement("div");
         card.classList.add("card");
-
+    
         const cardHeader = document.createElement("div");
         cardHeader.classList.add("card-header");
         cardHeader.textContent = person.name + " (" + person.birthDate + ")";
         cardHeader.addEventListener("click", () => {
             card.classList.toggle("active");
+    
+            // Si es la última tarjeta y se despliega, hacer scroll al fondo de la página
+            if (index === people.length - 1 && card.classList.contains("active")) {
+                card.scrollIntoView({ behavior: "smooth", block: "end" });
+            }
         });
-
+    
         const cardContent = document.createElement("div");
         cardContent.classList.add("card-content");
-
+    
         const createParagraph = (label, number, descriptionArray) => {
             const paragraph = document.createElement("p");
             paragraph.innerHTML = `<strong>${label}:</strong> ${number} - ${descriptionArray[number] || "Sin descripción"}`;
             return paragraph;
         };
-
+    
         cardContent.appendChild(createParagraph("Esencia", person.esencia, esenciaDescriptions));
         cardContent.appendChild(createParagraph("Karma", person.karma, karmaDescriptions));
         cardContent.appendChild(createParagraph("Regalo Divino", person.regaloDivino, regaloDivinoDescriptions));
         cardContent.appendChild(createParagraph("Vidas Pasadas", person.vidasPasadas, vidasPasadasDescriptions));
         cardContent.appendChild(createParagraph("Misión", person.mision, misionDescriptions));
         cardContent.appendChild(createParagraph("Obstáculo", person.obstaculo, obstaculoDescriptions));
-
+    
         card.appendChild(cardHeader);
         card.appendChild(cardContent);
-
+    
         cardsContainer.appendChild(card);
     });
+    
 });
