@@ -141,6 +141,16 @@ document.addEventListener("DOMContentLoaded", function () {
             "obstaculo": 3
         },
         {
+            "name": "Paola Bautista Calderón",
+            "birthDate": "05/Jul/2004",
+            "esencia": 5,   // 5 (día de nacimiento)
+            "karma": 7,     // 7 (mes de nacimiento)
+            "regaloDivino": 4, // 04 (últimos dos dígitos del año)
+            "vidasPasadas": 6, // 2+0+0+4 = 6
+            "mision": 16, // 5+7+2+0+0+4 = 18 -> 1+6 = 7
+            "obstaculo": 3  // 5 (esencia) + 7 (karma) = 12 -> 1+2 = 3
+        },
+        {
             "name": "Rebeca Sofía Espinal Cortes",
             "birthDate": "30/6/1996",
             "esencia": 3,
@@ -189,6 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "vidasPasadas": 6,
             "mision": 9,
             "obstaculo": 3
+
         }
     ];
 
@@ -292,44 +303,136 @@ document.addEventListener("DOMContentLoaded", function () {
         "Obstáculo de amor incondicional y enseñanza. Puede enfrentar desafíos para ofrecer amor incondicional y puede sentirse abrumado por la responsabilidad de enseñar y guiar a otros."
     ];
 
+    const initialsSet = new Set();
+
+    // Crear las tarjetas dinámicamente
     const cardsContainer = document.getElementById("cards-container");
 
-    people.forEach((person, index) => {
+    people.forEach(person => {
         const card = document.createElement("div");
         card.classList.add("card");
-    
+
         const cardHeader = document.createElement("div");
         cardHeader.classList.add("card-header");
         cardHeader.textContent = person.name + " (" + person.birthDate + ")";
         cardHeader.addEventListener("click", () => {
             card.classList.toggle("active");
-    
-            // Si es la última tarjeta y se despliega, hacer scroll al fondo de la página
-            if (index === people.length - 1 && card.classList.contains("active")) {
-                card.scrollIntoView({ behavior: "smooth", block: "end" });
-            }
         });
-    
+
         const cardContent = document.createElement("div");
         cardContent.classList.add("card-content");
-    
+
         const createParagraph = (label, number, descriptionArray) => {
             const paragraph = document.createElement("p");
             paragraph.innerHTML = `<strong>${label}:</strong> ${number} - ${descriptionArray[number] || "Sin descripción"}`;
             return paragraph;
         };
-    
+
         cardContent.appendChild(createParagraph("Esencia", person.esencia, esenciaDescriptions));
         cardContent.appendChild(createParagraph("Karma", person.karma, karmaDescriptions));
         cardContent.appendChild(createParagraph("Regalo Divino", person.regaloDivino, regaloDivinoDescriptions));
         cardContent.appendChild(createParagraph("Vidas Pasadas", person.vidasPasadas, vidasPasadasDescriptions));
         cardContent.appendChild(createParagraph("Misión", person.mision, misionDescriptions));
         cardContent.appendChild(createParagraph("Obstáculo", person.obstaculo, obstaculoDescriptions));
-    
+
         card.appendChild(cardHeader);
         card.appendChild(cardContent);
-    
+
         cardsContainer.appendChild(card);
+
+        // Agregar la inicial al set para los botones de iniciales
+        initialsSet.add(person.name.charAt(0).toUpperCase());
     });
-    
+
+    // Crear los botones de iniciales dinámicamente
+    const initialsContainer = document.getElementById("initials-container");
+
+    initialsSet.forEach(initial => {
+        const button = document.createElement("button");
+        button.classList.add("initial-button");
+        button.textContent = initial;
+        button.addEventListener("click", () => filterCardsByInitial(initial, button));
+        initialsContainer.appendChild(button);
+    });
+
+    // Función para filtrar tarjetas por nombre en la barra de búsqueda
+    function filterCardsByName() {
+        const searchTerm = document.getElementById("search-bar").value.toLowerCase();
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            const name = card.querySelector(".card-header").textContent.toLowerCase();
+            if (name.includes(searchTerm)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        // Actualizar los botones de iniciales según los resultados filtrados
+        updateInitials();
+    }
+
+    // Función para filtrar tarjetas por inicial
+    function filterCardsByInitial(initial, button) {
+        const cards = document.querySelectorAll(".card");
+        let isFiltered = button.classList.contains("active");
+
+        cards.forEach(card => {
+            const name = card.querySelector(".card-header").textContent;
+            if (name.startsWith(initial)) {
+                card.style.display = isFiltered ? "block" : "none";
+            }
+        });
+
+        button.classList.toggle("active");
+    }
+
+    // Función para expandir todas las tarjetas
+    function expandAllCards() {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            card.classList.add("active");
+            scrollToBottom(card);  // Desplazar hacia el fondo si se hace clic en la última tarjeta
+        });
+    }
+
+    // Función para colapsar todas las tarjetas
+    function collapseAllCards() {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => card.classList.remove("active"));
+    }
+
+    // Actualizar los botones de iniciales según el filtro
+    function updateInitials() {
+        const cards = document.querySelectorAll(".card");
+        const visibleInitials = new Set();
+
+        cards.forEach(card => {
+            if (card.style.display === "block") {
+                const initial = card.querySelector(".card-header").textContent.charAt(0).toUpperCase();
+                visibleInitials.add(initial);
+            }
+        });
+
+        const buttons = document.querySelectorAll(".initial-button");
+        buttons.forEach(button => {
+            if (visibleInitials.has(button.textContent)) {
+                button.style.display = "inline-block";
+            } else {
+                button.style.display = "none";
+            }
+        });
+    }
+
+    // Función para desplazar hacia el fondo cuando se expande la última tarjeta
+    function scrollToBottom(card) {
+        if (card === cardsContainer.lastElementChild) {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: 'smooth'
+                });
+            }, 300);  // Asegurarse de esperar a la animación
+        }
+    }
 });
