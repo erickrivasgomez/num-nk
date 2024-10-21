@@ -59,3 +59,36 @@ h1 {
         flex-direction: column;
     }
 }
+
+/* Basic styling for tabs and cards */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.tab {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+.tab.active {
+    background-color: #007bff;
+    color: white;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}

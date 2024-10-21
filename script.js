@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 0,
             "vidasPasadas": 2,
             "mision": 2,
-            "obstaculo": 9
+            "obstaculo": 9,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Aracely Valdés Gutierrez",
@@ -18,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 6,
             "vidasPasadas": 7,
             "mision": 1,
-            "obstaculo": 4
+            "obstaculo": 4,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Consuelo Mabel Vega Gonzalez",
@@ -28,7 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 6,
             "vidasPasadas": 7,
             "mision": 11,
-            "obstaculo": 4
+            "obstaculo": 4,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Elizabeth Arreola Mondragón",
@@ -38,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 8,
             "vidasPasadas": 9,
             "mision": 3,
-            "obstaculo": 4
+            "obstaculo": 4,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Hilda de la Torre Ponce",
@@ -48,7 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 4,
             "vidasPasadas": 10,
             "mision": 2,
-            "obstaculo": 7
+            "obstaculo": 7,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Magdalena Sánchez Molinero",
@@ -58,7 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 3,
             "vidasPasadas": 2,
             "mision": 7,
-            "obstaculo": 5
+            "obstaculo": 5,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Magdalena Vidales Sánchez",
@@ -68,7 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 0,
             "vidasPasadas": 2,
             "mision": 5,
-            "obstaculo": 3
+            "obstaculo": 3,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "María de la Salud Solórzano Villalón",
@@ -78,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 4,
             "vidasPasadas": 5,
             "mision": 8,
-            "obstaculo": 1
+            "obstaculo": 1,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "María Fernanda Infante Soria",
@@ -88,7 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 9,
             "vidasPasadas": 2,
             "mision": 4,
-            "obstaculo": 3
+            "obstaculo": 3,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "María Guadalupe Gomez Herrera",
@@ -98,7 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 3,
             "vidasPasadas": 4,
             "mision": 5,
-            "obstaculo": 9
+            "obstaculo": 9,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Martha Alicia Cortes Rodriguez",
@@ -108,7 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 10,
             "vidasPasadas": 2,
             "mision": 5,
-            "obstaculo": 8
+            "obstaculo": 8,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Miriam Graciela Sánchez Rocha",
@@ -118,7 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 11,
             "vidasPasadas": 3,
             "mision": 9,
-            "obstaculo": 6
+            "obstaculo": 6,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Mónica Reyes Gomez",
@@ -128,7 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 7,
             "vidasPasadas": 8,
             "mision": 5,
-            "obstaculo": 9
+            "obstaculo": 9,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Nancy Karina Sánchez Villalón",
@@ -138,7 +151,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 6,
             "vidasPasadas": 7,
             "mision": 6,
-            "obstaculo": 3
+            "obstaculo": 3,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Paola Bautista Calderón",
@@ -148,7 +162,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 4, // 04 (últimos dos dígitos del año)
             "vidasPasadas": 6, // 2+0+0+4 = 6
             "mision": 16, // 5+7+2+0+0+4 = 18 -> 1+6 = 7
-            "obstaculo": 3  // 5 (esencia) + 7 (karma) = 12 -> 1+2 = 3
+            "obstaculo": 3,
+            "grupo": "Pacientes"  // 5 (esencia) + 7 (karma) = 12 -> 1+2 = 3
         },
         {
             "name": "Rebeca Sofía Espinal Cortes",
@@ -158,7 +173,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 6,
             "vidasPasadas": 7,
             "mision": 4,
-            "obstaculo": 9
+            "obstaculo": 9,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Reyna Curintzita Ramos",
@@ -168,7 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 4,
             "vidasPasadas": 3,
             "mision": 5,
-            "obstaculo": 9
+            "obstaculo": 9,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Rosa María Villalón Martinez del Campo",
@@ -178,7 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 8,
             "vidasPasadas": 2,
             "mision": 3,
-            "obstaculo": 1
+            "obstaculo": 1,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Sandra Lourdes Nuñez Rodriguez",
@@ -188,7 +206,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 7,
             "vidasPasadas": 8,
             "mision": 9,
-            "obstaculo": 4
+            "obstaculo": 4,
+            "grupo": "Círculo de mujeres 19/10/24"
         },
         {
             "name": "Verónica Gomez García",
@@ -198,7 +217,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "regaloDivino": 5,
             "vidasPasadas": 6,
             "mision": 9,
-            "obstaculo": 3
+            "obstaculo": 3,
+            "grupo": "Círculo de mujeres 19/10/24"
 
         }
     ];
@@ -308,41 +328,72 @@ document.addEventListener("DOMContentLoaded", function () {
     // Crear las tarjetas dinámicamente
     const cardsContainer = document.getElementById("cards-container");
 
-    people.forEach(person => {
-        const card = document.createElement("div");
-        card.classList.add("card");
+    // Generate unique groups
+    const groups = [...new Set(people.map(person => person.grupo))];
 
-        const cardHeader = document.createElement("div");
-        cardHeader.classList.add("card-header");
-        cardHeader.textContent = person.name + " (" + person.birthDate + ")";
-        cardHeader.addEventListener("click", () => {
-            card.classList.toggle("active");
-        });
-
-        const cardContent = document.createElement("div");
-        cardContent.classList.add("card-content");
-
-        const createParagraph = (label, number, descriptionArray) => {
-            const paragraph = document.createElement("p");
-            paragraph.innerHTML = `<strong>${label}:</strong> ${number} - ${descriptionArray[number] || "Sin descripción"}`;
-            return paragraph;
-        };
-
-        cardContent.appendChild(createParagraph("Esencia", person.esencia, esenciaDescriptions));
-        cardContent.appendChild(createParagraph("Karma", person.karma, karmaDescriptions));
-        cardContent.appendChild(createParagraph("Regalo Divino", person.regaloDivino, regaloDivinoDescriptions));
-        cardContent.appendChild(createParagraph("Vidas Pasadas", person.vidasPasadas, vidasPasadasDescriptions));
-        cardContent.appendChild(createParagraph("Misión", person.mision, misionDescriptions));
-        cardContent.appendChild(createParagraph("Obstáculo", person.obstaculo, obstaculoDescriptions));
-
-        card.appendChild(cardHeader);
-        card.appendChild(cardContent);
-
-        cardsContainer.appendChild(card);
-
-        // Agregar la inicial al set para los botones de iniciales
-        initialsSet.add(person.name.charAt(0).toUpperCase());
+    // Create tabs
+    const tabsContainer = document.getElementById('tabs');
+    groups.forEach(group => {
+        const tab = document.createElement('div');
+        tab.className = 'tab';
+        tab.innerText = group;
+        tab.onclick = () => filterCards(group);
+        tabsContainer.appendChild(tab);
     });
+
+    function createCards(group) {
+        cardsContainer.innerHTML = '';
+        people.filter(person => person.grupo === group).forEach(person => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            const cardHeader = document.createElement("div");
+            cardHeader.classList.add("card-header");
+            cardHeader.textContent = person.name + " (" + person.birthDate + ")";
+            cardHeader.addEventListener("click", () => {
+                card.classList.toggle("active");
+            });
+
+            const cardContent = document.createElement("div");
+            cardContent.classList.add("card-content");
+
+            const createParagraph = (label, number, descriptionArray) => {
+                const paragraph = document.createElement("p");
+                paragraph.innerHTML = `<strong>${label}:</strong> ${number} - ${descriptionArray[number] || "Sin descripción"}`;
+                return paragraph;
+            };
+
+            cardContent.appendChild(createParagraph("Esencia", person.esencia, esenciaDescriptions));
+            cardContent.appendChild(createParagraph("Karma", person.karma, karmaDescriptions));
+            cardContent.appendChild(createParagraph("Regalo Divino", person.regaloDivino, regaloDivinoDescriptions));
+            cardContent.appendChild(createParagraph("Vidas Pasadas", person.vidasPasadas, vidasPasadasDescriptions));
+            cardContent.appendChild(createParagraph("Misión", person.mision, misionDescriptions));
+            cardContent.appendChild(createParagraph("Obstáculo", person.obstaculo, obstaculoDescriptions));
+
+            card.appendChild(cardHeader);
+            card.appendChild(cardContent);
+
+            cardsContainer.appendChild(card);
+
+            // Agregar la inicial al set para los botones de iniciales
+            initialsSet.add(person.name.charAt(0).toUpperCase());
+        });
+    }
+
+// Filter cards by group
+function filterCards(group) {
+    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+    const activeTab = Array.from(document.querySelectorAll('.tab')).find(tab => tab.innerText === group);
+    if (activeTab) {
+        activeTab.classList.add('active');
+    }
+    createCards(group);
+}
+
+    // Initialize with the first group
+    if (groups.length > 0) {
+        filterCards(groups[0]);
+    }
 
     // Crear los botones de iniciales dinámicamente
     const initialsContainer = document.getElementById("initials-container");
@@ -435,4 +486,5 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 300);  // Asegurarse de esperar a la animación
         }
     }
+
 });
