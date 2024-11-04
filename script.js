@@ -45,6 +45,18 @@ document.addEventListener("DOMContentLoaded", function () {
             "grupo": "Círculo de mujeres 19/10/24"
         },
         {
+    "name": "Estefania Cedeño García",
+    "birthDate": "13/01/98",
+    "esencia": 4,
+    "karma": 1,
+    "regaloDivino": 8,
+    "vidasPasadas": 3,
+    "mision": 22,
+    "obstaculo": 5,
+    "grupo": "Pacientes"
+},
+
+        {
             "name": "Hilda de la Torre Ponce",
             "birthDate": "15/4/1972",
             "esencia": 5,
@@ -55,6 +67,18 @@ document.addEventListener("DOMContentLoaded", function () {
             "obstaculo": 7,
             "grupo": "Círculo de mujeres 19/10/24"
         },
+            {
+    "name": "Jose Luis Montes Chacón",
+    "birthDate": "09/03/95",
+    "esencia": 9,
+    "karma": 3,
+    "regaloDivino": 5,
+    "vidasPasadas": 8,
+    "mision": 8,
+    "obstaculo": 3,
+    "grupo": "Pacientes"
+},
+
         {
             "name": "Magdalena Sánchez Molinero",
             "birthDate": "12/11/1963",
