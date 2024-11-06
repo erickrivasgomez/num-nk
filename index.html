@@ -5,18 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarjetas de Numerología</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sidebar.css">
 </head>
 <body>
     <div class="container">
         <h1>Resultados de Numerología</h1>
 
         <div class="tabs" id="tabs"></div>
-        <!-- Contenedor de las tarjetas -->
         <div id="cards-container" class="cards-container">
             <!-- Las tarjetas se insertarán aquí dinámicamente -->
         </div>
     </div>
 
+    <!-- Sidebar para el formulario de cálculo -->
+    <div id="sidebar" class="sidebar collapsed">
+        <button class="toggle" onclick="toggleSidebar()">☰</button>
+        <div class="sidebar-content">
+            <h2>Formulario de Numerología</h2>
+            <form id="numerologyForm" onsubmit="calculateNumerology(event)">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate">Fecha de Nacimiento:</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="group">Grupo:</label>
+                    <input type="text" id="group" name="group" required>
+                </div>
+                <button type="submit">Calcular</button>
+            </form>
+            <div id="output" class="output">
+                <button class="copy-button" onclick="copyToClipboard()">📋 Copiar</button>
+                <pre id="outputContent"></pre>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="sidebar.js"></script>
 </body>
 </html>
