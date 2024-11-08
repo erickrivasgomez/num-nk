@@ -262,5 +262,16 @@
         "mision": 11,
         "obstaculo": 3,
         "grupo": "Baby Blessing Pau 10/11/24"
-    }
+    },
+    {
+    "name": "Alexis López",
+    "birthDate": "1995-03-18",
+    "esencia": 9,
+    "karma": 3,
+    "regaloDivino": 5,
+    "vidasPasadas": 6,
+    "mision": 9,
+    "obstaculo": 3,
+    "grupo": "Pacientes"
+}
 ]
