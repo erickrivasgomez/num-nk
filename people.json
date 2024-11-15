@@ -273,5 +273,16 @@
     "mision": 9,
     "obstaculo": 3,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Victoria Espinal Cortes",
+    "birthDate": "2002-12-26",
+    "esencia": 8,
+    "karma": 3,
+    "regaloDivino": 2,
+    "vidasPasadas": 4,
+    "mision": 6,
+    "obstaculo": 11,
+    "grupo": "Pacientes"
 }
 ]
