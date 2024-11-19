@@ -284,5 +284,16 @@
     "mision": 6,
     "obstaculo": 11,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Alejandra Guzmán de la Torre",
+    "birthDate": "1994-01-23",
+    "esencia": 5,
+    "karma": 1,
+    "regaloDivino": 4,
+    "vidasPasadas": 5,
+    "mision": 11,
+    "obstaculo": 6,
+    "grupo": "Pacientes"
 }
 ]
