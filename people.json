@@ -295,5 +295,27 @@
     "mision": 11,
     "obstaculo": 6,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Angélica Carolina Bedolla Herrera",
+    "birthDate": "1998-02-10",
+    "esencia": 10,
+    "karma": 2,
+    "regaloDivino": 8,
+    "vidasPasadas": 9,
+    "mision": 3,
+    "obstaculo": 3,
+    "grupo": "Taller Navideño"
+},
+    {
+    "name": "Nadia Monsserrat Núñez Márquez",
+    "birthDate": "1988-02-20",
+    "esencia": 2,
+    "karma": 2,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 3,
+    "obstaculo": 4,
+    "grupo": "Taller Navideño"
 }
 ]
