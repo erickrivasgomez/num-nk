@@ -317,5 +317,16 @@
     "mision": 3,
     "obstaculo": 4,
     "grupo": "Taller Navideño"
+},
+    {
+    "name": "Ximena Arciga Contreras",
+    "birthDate": "1997-11-20",
+    "esencia": 2,
+    "karma": 11,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 3,
+    "obstaculo": 4,
+    "grupo": "Pacientes"
 }
 ]
