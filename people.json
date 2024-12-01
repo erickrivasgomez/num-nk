@@ -328,5 +328,38 @@
     "mision": 3,
     "obstaculo": 4,
     "grupo": "Taller Navideño"
+},
+    {
+        "name": "Aracely Valdés Gutierrez",
+        "birthDate": "18/4/1996",
+        "esencia": 9,
+        "karma": 4,
+        "regaloDivino": 6,
+        "vidasPasadas": 7,
+        "mision": 1,
+        "obstaculo": 4,
+        "grupo": "Taller Navideño"
+    },
+    {
+    "name": "Gerardo Bermudez Romero",
+    "birthDate": "1993-10-19",
+    "esencia": 10,
+    "karma": 10,
+    "regaloDivino": 3,
+    "vidasPasadas": 22,
+    "mision": 6,
+    "obstaculo": 2,
+    "grupo": "Taller Navideño"
+},
+    {
+    "name": "Alejandra Morales Rueda",
+    "birthDate": "1994-09-28",
+    "esencia": 10,
+    "karma": 9,
+    "regaloDivino": 4,
+    "vidasPasadas": 5,
+    "mision": 6,
+    "obstaculo": 10,
+    "grupo": "Taller Navideño"
 }
 ]
