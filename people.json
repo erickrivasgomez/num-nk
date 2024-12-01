@@ -361,5 +361,16 @@
     "mision": 6,
     "obstaculo": 10,
     "grupo": "Taller Navideño"
+},
+    {
+    "name": "Jazmin Aguilar",
+    "birthDate": "1996-10-27",
+    "esencia": 9,
+    "karma": 10,
+    "regaloDivino": 6,
+    "vidasPasadas": 7,
+    "mision": 8,
+    "obstaculo": 10,
+    "grupo": "Taller Navideño"
 }
 ]
