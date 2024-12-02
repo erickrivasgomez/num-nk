@@ -372,5 +372,16 @@
     "mision": 8,
     "obstaculo": 10,
     "grupo": "Taller Navideño"
+},
+    {
+    "name": "María Georgina García Pérez Vélez",
+    "birthDate": "1982-09-04",
+    "esencia": 4,
+    "karma": 9,
+    "regaloDivino": 10,
+    "vidasPasadas": 2,
+    "mision": 6,
+    "obstaculo": 4,
+    "grupo": "Taller Navideño"
 }
 ]
