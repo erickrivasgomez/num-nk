@@ -405,5 +405,16 @@
     "mision": 5,
     "obstaculo": 6,
     "grupo": "Taller Navideño"
+},
+    {
+    "name": "Tania Orrostieta Rodríguez",
+    "birthDate": "1988-03-22",
+    "esencia": 22,
+    "karma": 3,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 6,
+    "obstaculo": 7,
+    "grupo": "Taller Navideño"
 }
 ]
