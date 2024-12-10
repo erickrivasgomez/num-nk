@@ -394,5 +394,16 @@
     "mision": 6,
     "obstaculo": 4,
     "grupo": "Taller Navideño"
+},
+    {
+    "name": "Fernanda Fuentes",
+    "birthDate": "1997-05-10",
+    "esencia": 10,
+    "karma": 5,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 5,
+    "obstaculo": 6,
+    "grupo": "Taller Navideño"
 }
 ]
