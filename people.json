@@ -416,5 +416,27 @@
     "mision": 6,
     "obstaculo": 7,
     "grupo": "Taller Navideño"
-}
+},
+    {
+        "name": "Reyna Curintzita Ramos",
+        "birthDate": "25/8/1976",
+        "esencia": 7,
+        "karma": 8,
+        "regaloDivino": 4,
+        "vidasPasadas": 3,
+        "mision": 5,
+        "obstaculo": 9,
+    "grupo": "Taller Navideño"
+    },
+    {
+        "name": "Miriam Graciela Sánchez Rocha",
+        "birthDate": "5/10/1974",
+        "esencia": 5,
+        "karma": 1,
+        "regaloDivino": 11,
+        "vidasPasadas": 3,
+        "mision": 9,
+        "obstaculo": 6,
+    "grupo": "Taller Navideño"
+    },
 ]
