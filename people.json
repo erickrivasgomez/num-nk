@@ -438,5 +438,27 @@
         "mision": 9,
         "obstaculo": 6,
     "grupo": "Taller Navideño"
-    }
+    },
+    {
+    "name": "Jorge Sanchez",
+    "birthDate": "1965-05-10",
+    "esencia": 10,
+    "karma": 5,
+    "regaloDivino": 11,
+    "vidasPasadas": 3,
+    "mision": 9,
+    "obstaculo": 6,
+    "grupo": "Taller Navideño"
+},
+    {
+    "name": "Rosy Villalón",
+    "birthDate": "1968-03-07",
+    "esencia": 7,
+    "karma": 3,
+    "regaloDivino": 5,
+    "vidasPasadas": 6,
+    "mision": 7,
+    "obstaculo": 10,
+    "grupo": "Taller Navideño"
+}
 ]
