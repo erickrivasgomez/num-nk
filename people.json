@@ -460,5 +460,16 @@
     "mision": 7,
     "obstaculo": 10,
     "grupo": "Taller Navideño"
+},
+    {
+    "name": "María Fernanda Núñez Duran",
+    "birthDate": "1991-12-19",
+    "esencia": 10,
+    "karma": 3,
+    "regaloDivino": 10,
+    "vidasPasadas": 2,
+    "mision": 6,
+    "obstaculo": 4,
+    "grupo": "Taller Navideño"
 }
 ]
