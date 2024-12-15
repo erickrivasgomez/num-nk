@@ -471,5 +471,16 @@
     "mision": 6,
     "obstaculo": 4,
     "grupo": "Taller Navideño"
+},
+    {
+    "name": "Ester Madai Giacopello Hortal",
+    "birthDate": "2000-10-16",
+    "esencia": 7,
+    "karma": 10,
+    "regaloDivino": 0,
+    "vidasPasadas": 2,
+    "mision": 10,
+    "obstaculo": 8,
+    "grupo": "Taller Navideño"
 }
 ]
