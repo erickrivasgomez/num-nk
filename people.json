@@ -589,5 +589,16 @@
     "mision": 6,
     "obstaculo": 11,
     "grupo": "Yoga"
+},
+    {
+    "name": "Sandra Moreno Torres",
+    "birthDate": "1976-09-09",
+    "esencia": 9,
+    "karma": 9,
+    "regaloDivino": 4,
+    "vidasPasadas": 5,
+    "mision": 5,
+    "obstaculo": 9,
+    "grupo": "Yoga"
 }
 ]
