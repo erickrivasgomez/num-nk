@@ -482,5 +482,112 @@
     "mision": 10,
     "obstaculo": 8,
     "grupo": "Taller Navideño"
+},
+    {
+    "name": "Sandra Alondra Aguiñia Quintana",
+    "birthDate": "1980-11-05",
+    "esencia": 5,
+    "karma": 11,
+    "regaloDivino": 8,
+    "vidasPasadas": 9,
+    "mision": 7,
+    "obstaculo": 7,
+    "grupo": "Yoga"
+},
+
+{
+    "name": "Carmen Gloria Sotomayor Magaña",
+    "birthDate": "1998-07-11",
+    "esencia": 11,
+    "karma": 7,
+    "regaloDivino": 8,
+    "vidasPasadas": 9,
+    "mision": 9,
+    "obstaculo": 9,
+    "grupo": "Yoga"
+},
+
+{
+    "name": "Deyanira Chávez Gutiérrez",
+    "birthDate": "1985-05-21",
+    "esencia": 3,
+    "karma": 5,
+    "regaloDivino": 4,
+    "vidasPasadas": 5,
+    "mision": 4,
+    "obstaculo": 8,
+    "grupo": "Yoga"
+},
+
+{
+    "name": "Laura Elizabeth Juárez Peña",
+    "birthDate": "1981-05-26",
+    "esencia": 8,
+    "karma": 5,
+    "regaloDivino": 9,
+    "vidasPasadas": 10,
+    "mision": 5,
+    "obstaculo": 4,
+    "grupo": "Yoga"
+},
+
+{
+    "name": "Nallely Melo Gaytán",
+    "birthDate": "1976-04-13",
+    "esencia": 4,
+    "karma": 4,
+    "regaloDivino": 4,
+    "vidasPasadas": 5,
+    "mision": 4,
+    "obstaculo": 8,
+    "grupo": "Yoga"
+},
+
+{
+    "name": "Natalia Gómez Martinez",
+    "birthDate": "1994-11-06",
+    "esencia": 6,
+    "karma": 11,
+    "regaloDivino": 4,
+    "vidasPasadas": 5,
+    "mision": 4,
+    "obstaculo": 8,
+    "grupo": "Yoga"
+},
+
+{
+    "name": "Rocio Villegas Huerta",
+    "birthDate": "1980-05-24",
+    "esencia": 6,
+    "karma": 5,
+    "regaloDivino": 8,
+    "vidasPasadas": 9,
+    "mision": 11,
+    "obstaculo": 11,
+    "grupo": "Yoga"
+},
+
+{
+    "name": "Yuritzi Torres Cárdenas",
+    "birthDate": "1980-01-27",
+    "esencia": 9,
+    "karma": 1,
+    "regaloDivino": 8,
+    "vidasPasadas": 9,
+    "mision": 10,
+    "obstaculo": 10,
+    "grupo": "Yoga"
+},
+
+{
+    "name": "Victoria Espinal Cortes",
+    "birthDate": "2002-12-26",
+    "esencia": 8,
+    "karma": 3,
+    "regaloDivino": 2,
+    "vidasPasadas": 4,
+    "mision": 6,
+    "obstaculo": 11,
+    "grupo": "Yoga"
 }
 ]
