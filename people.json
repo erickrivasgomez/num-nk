@@ -600,5 +600,37 @@
     "mision": 5,
     "obstaculo": 9,
     "grupo": "Yoga"
+},
+    {
+    "name": "Paulinne Edday Siliceo Ayala ",
+    "birthDate": "1999-06-05",
+    "esencia": 5,
+    "karma": 6,
+    "regaloDivino": 9,
+    "vidasPasadas": 10,
+    "mision": 3,
+    "obstaculo": 11,
+    "grupo": "Despedida Ruabit"
+},{
+    "name": "Ruabit",
+    "birthDate": "2002-08-02",
+    "esencia": 2,
+    "karma": 8,
+    "regaloDivino": 2,
+    "vidasPasadas": 4,
+    "mision": 5,
+    "obstaculo": 10,
+    "grupo": "Despedida Ruabit"
+},
+{
+    "name": "Ruabit",
+    "birthDate": "2025-01-26",
+    "esencia": 8,
+    "karma": 1,
+    "regaloDivino": 7,
+    "vidasPasadas": 9,
+    "mision": 9,
+    "obstaculo": 9,
+    "grupo": "Despedida Ruabit"
 }
 ]
