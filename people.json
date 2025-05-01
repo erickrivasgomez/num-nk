@@ -632,5 +632,27 @@
     "mision": 9,
     "obstaculo": 9,
     "grupo": "Despedida Ruabit"
+},
+    {
+    "name": "Ana María Rosaura",
+    "birthDate": "1948-10-13",
+    "esencia": 4,
+    "karma": 10,
+    "regaloDivino": 3,
+    "vidasPasadas": 22,
+    "mision": 9,
+    "obstaculo": 5,
+    "grupo": "Pacientes"
+},
+{
+    "name": "Iker André Arredondo",
+    "birthDate": "2013-03-20",
+    "esencia": 2,
+    "karma": 3,
+    "regaloDivino": 4,
+    "vidasPasadas": 6,
+    "mision": 11,
+    "obstaculo": 5,
+    "grupo": "Pacientes"
 }
 ]
