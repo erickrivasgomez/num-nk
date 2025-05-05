@@ -654,5 +654,16 @@
     "mision": 11,
     "obstaculo": 5,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Mercedes Castillo Quiroz",
+    "birthDate": "1961-08-21",
+    "esencia": 3,
+    "karma": 8,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 10,
+    "obstaculo": 11,
+    "grupo": "Pacientes"
 }
 ]
