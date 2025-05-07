@@ -687,5 +687,16 @@
     "mision": 7,
     "obstaculo": 8,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Blanca Eliuth Zaragoza Campos",
+    "birthDate": "1977-10-31",
+    "esencia": 4,
+    "karma": 10,
+    "regaloDivino": 5,
+    "vidasPasadas": 6,
+    "mision": 11,
+    "obstaculo": 5,
+    "grupo": "Pacientes"
 }
 ]
