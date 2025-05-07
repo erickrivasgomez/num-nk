@@ -665,5 +665,16 @@
     "mision": 10,
     "obstaculo": 11,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Alberto Cruz García",
+    "birthDate": "1997-06-18",
+    "esencia": 9,
+    "karma": 6,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 5,
+    "obstaculo": 6,
+    "grupo": "Pacientes"
 }
 ]
