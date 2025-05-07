@@ -676,5 +676,16 @@
     "mision": 5,
     "obstaculo": 6,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Maria de Jesús Soriano Vázquez",
+    "birthDate": "1952-06-20",
+    "esencia": 2,
+    "karma": 6,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 7,
+    "obstaculo": 8,
+    "grupo": "Pacientes"
 }
 ]
