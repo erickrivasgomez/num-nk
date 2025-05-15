@@ -698,5 +698,27 @@
     "mision": 11,
     "obstaculo": 5,
     "grupo": "Pacientes"
+},
+    {
+    "name": "María Fernanda Montaño Arizmendi",
+    "birthDate": "1997-07-31",
+    "esencia": 4,
+    "karma": 7,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 10,
+    "obstaculo": 11,
+    "grupo": "Tarot"
+},
+{
+    "name": "Diana Laura Lozano Guzmán",
+    "birthDate": "1998-04-18",
+    "esencia": 9,
+    "karma": 4,
+    "regaloDivino": 8,
+    "vidasPasadas": 9,
+    "mision": 4,
+    "obstaculo": 4,
+    "grupo": "Tarot"
 }
 ]
