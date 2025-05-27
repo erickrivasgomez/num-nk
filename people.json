@@ -720,5 +720,16 @@
     "mision": 4,
     "obstaculo": 4,
     "grupo": "Tarot"
+},
+    {
+    "name": "Berenice Rivas Solís",
+    "birthDate": "1983-08-19",
+    "esencia": 10,
+    "karma": 8,
+    "regaloDivino": 11,
+    "vidasPasadas": 3,
+    "mision": 3,
+    "obstaculo": 9,
+    "grupo": "Pacientes"
 }
 ]
