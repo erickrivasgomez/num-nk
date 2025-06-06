@@ -731,5 +731,16 @@
     "mision": 3,
     "obstaculo": 9,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Daniela Macouzet Salgado",
+    "birthDate": "1979-04-04",
+    "esencia": 4,
+    "karma": 4,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 7,
+    "obstaculo": 8,
+    "grupo": "Pacientes"
 }
 ]
