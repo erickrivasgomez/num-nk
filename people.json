@@ -742,5 +742,27 @@
     "mision": 7,
     "obstaculo": 8,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Andrea Garduño",
+    "birthDate": "1997-10-15",
+    "esencia": 6,
+    "karma": 10,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 6,
+    "obstaculo": 7,
+    "grupo": "Solsticio"
+},
+{
+    "name": "Saudi Couto",
+    "birthDate": "1996-05-08",
+    "esencia": 8,
+    "karma": 5,
+    "regaloDivino": 6,
+    "vidasPasadas": 7,
+    "mision": 11,
+    "obstaculo": 4,
+    "grupo": "Solsticio"
 }
 ]
