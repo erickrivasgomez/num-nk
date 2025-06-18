@@ -764,5 +764,27 @@
     "mision": 11,
     "obstaculo": 4,
     "grupo": "Solsticio"
+},
+    {
+    "name": "María Fernanda Infante Soria",
+    "birthDate": "1999-01-11",
+    "esencia": 11,
+    "karma": 1,
+    "regaloDivino": 9,
+    "vidasPasadas": 10,
+    "mision": 4,
+    "obstaculo": 3,
+    "grupo": "Solsticio"
+},
+{
+    "name": "Yasser Fernando Rivera Casillas",
+    "birthDate": "1999-03-13",
+    "esencia": 4,
+    "karma": 3,
+    "regaloDivino": 9,
+    "vidasPasadas": 10,
+    "mision": 8,
+    "obstaculo": 7,
+    "grupo": "Solsticio"
 }
 ]
