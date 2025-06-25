@@ -786,5 +786,27 @@
     "mision": 8,
     "obstaculo": 7,
     "grupo": "Solsticio"
+},
+    {
+    "name": "Ian Marco Calderón Pérez",
+    "birthDate": "2013-05-22",
+    "esencia": 22,
+    "karma": 5,
+    "regaloDivino": 4,
+    "vidasPasadas": 6,
+    "mision": 6,
+    "obstaculo": 9,
+    "grupo": "Pacientes"
+},
+{
+    "name": "Ximena Mijayli Calderón Pérez",
+    "birthDate": "2011-03-22",
+    "esencia": 22,
+    "karma": 3,
+    "regaloDivino": 11,
+    "vidasPasadas": 4,
+    "mision": 11,
+    "obstaculo": 7,
+    "grupo": "Pacientes"
 }
 ]
