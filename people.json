@@ -808,5 +808,82 @@
     "mision": 11,
     "obstaculo": 7,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Maricarmen Trejo Montes de Oca",
+    "birthDate": "1986-04-15",
+    "esencia": 6,
+    "karma": 4,
+    "regaloDivino": 5,
+    "vidasPasadas": 6,
+    "mision": 7,
+    "obstaculo": 10,
+    "grupo": "Yoga 2"
+},
+    {
+    "name": "Angélica Carolina Bedolla Herrera",
+    "birthDate": "1998-02-10",
+    "esencia": 10,
+    "karma": 2,
+    "regaloDivino": 8,
+    "vidasPasadas": 9,
+    "mision": 3,
+    "obstaculo": 3,
+    "grupo": "Yoga 2"
+},
+    {
+    "name": "Esther Zamudio Luna",
+    "birthDate": "1966-07-01",
+    "esencia": 1,
+    "karma": 7,
+    "regaloDivino": 3,
+    "vidasPasadas": 22,
+    "mision": 3,
+    "obstaculo": 8,
+    "grupo": "Yoga 2"
+},
+    {
+    "name": "Susana Barragán Farfán",
+    "birthDate": "1966-06-24",
+    "esencia": 6,
+    "karma": 6,
+    "regaloDivino": 3,
+    "vidasPasadas": 22,
+    "mision": 7,
+    "obstaculo": 3,
+    "grupo": "Yoga 2"
+},
+    {
+    "name": "María Idalia Pérez Ortega",
+    "birthDate": "1984-08-10",
+    "esencia": 10,
+    "karma": 8,
+    "regaloDivino": 3,
+    "vidasPasadas": 22,
+    "mision": 4,
+    "obstaculo": 9,
+    "grupo": "Yoga 2"
+},
+    {
+    "name": "Dora Marcela Medina Salinas",
+    "birthDate": "1962-06-13",
+    "esencia": 4,
+    "karma": 6,
+    "regaloDivino": 8,
+    "vidasPasadas": 9,
+    "mision": 1,
+    "obstaculo": 10,
+    "grupo": "Yoga 2"
+},
+    {
+    "name": "Paulina Mora Coronel",
+    "birthDate": "1998-10-10",
+    "esencia": 10,
+    "karma": 10,
+    "regaloDivino": 8,
+    "vidasPasadas": 9,
+    "mision": 11,
+    "obstaculo": 2,
+    "grupo": "Yoga 2"
 }
 ]
