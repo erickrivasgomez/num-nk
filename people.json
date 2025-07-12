@@ -896,5 +896,16 @@
     "mision": 6,
     "obstaculo": 7,
     "grupo": "Yoga 2"
+},
+    {
+    "name": "Dora Marcela Medina Salinas",
+    "birthDate": "1996-06-13",
+    "esencia": 4,
+    "karma": 6,
+    "regaloDivino": 6,
+    "vidasPasadas": 7,
+    "mision": 8,
+    "obstaculo": 10,
+    "grupo": "Yoga 2"
 }
 ]
