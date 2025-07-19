@@ -907,5 +907,16 @@
     "mision": 8,
     "obstaculo": 10,
     "grupo": "Yoga 2"
+},
+    {
+    "name": "Lorena Narvaes",
+    "birthDate": "1990-10-12",
+    "esencia": 3,
+    "karma": 10,
+    "regaloDivino": 9,
+    "vidasPasadas": 10,
+    "mision": 5,
+    "obstaculo": 4,
+    "grupo": "Pacientes"
 }
 ]
