@@ -918,5 +918,16 @@
     "mision": 5,
     "obstaculo": 4,
     "grupo": "Pacientes"
+},
+    {
+    "name": "Fer Ojeda",
+    "birthDate": "1997-01-18",
+    "esencia": 9,
+    "karma": 1,
+    "regaloDivino": 7,
+    "vidasPasadas": 8,
+    "mision": 9,
+    "obstaculo": 10,
+    "grupo": "Pacientes"
 }
 ]
