@@ -1,3 +1,7 @@
+// sheetdb-config.js
+const SHEETDB_API_URL = "https://sheetdb.io/api/v1/iq7ptk9iytmbx"; 
+// Reemplaza con tu endpoint real
+
 // Toggle Sidebar Visibility
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
@@ -24,16 +28,46 @@ const calculatePastLives = (year) => reduceToSingleDigit(year.toString().split("
 const calculateMission = (day, month, year) => reduceToSingleDigit(day + month + parseInt(year.toString().slice(0, 2)) + parseInt(year.toString().slice(2)));
 const calculateObstacle = (essence, karma) => reduceToSingleDigit(essence + karma);
 
-// Form submission handler
-function calculateNumerology(event) {
+// Mensajes de error
+const errorMessageId = "uploadErrorMessage";
+
+function showError(message) {
+    let errorDiv = document.getElementById(errorMessageId);
+    if (!errorDiv) {
+        errorDiv = document.createElement("div");
+        errorDiv.id = errorMessageId;
+        errorDiv.classList.add("errorMessageUpload"); // clase CSS para estilo
+        const form = document.getElementById("numerologyForm");
+        const submitBtn = form.querySelector("button[type='submit']");
+        form.insertBefore(errorDiv, submitBtn);
+    }
+    errorDiv.textContent = message;
+}
+
+
+function clearError() {
+    const errorDiv = document.getElementById(errorMessageId);
+    if (errorDiv) {
+        errorDiv.remove();
+    }
+}
+
+async function calculateNumerology(event) {
     event.preventDefault();
 
-    const name = document.getElementById("name").value;
+    clearError();
+
+    const name = document.getElementById("name").value.trim();
     const birthDate = document.getElementById("birthDate").value;
-    const group = document.getElementById("group").value;
+    const group = document.getElementById("group").value.trim();
+
+    if (!name || !birthDate || !group) {
+        alert("Por favor completa todos los campos.");
+        return;
+    }
 
     const [year, month, day] = birthDate.split("-").map(Number);
-    
+
     const essence = calculateEssence(day);
     const karma = calculateKarma(month);
     const divineGift = calculateDivineGift(year);
@@ -43,22 +77,48 @@ function calculateNumerology(event) {
 
     const numerologyResult = {
         name: name,
-        birthDate: birthDate,
-        esencia: essence,
+        birthdate: birthDate,
+        group: group,
+        essence: essence,
         karma: karma,
-        regaloDivino: divineGift,
-        vidasPasadas: pastLives,
-        mision: mission,
-        obstaculo: obstacle,
-        grupo: group
+        gift: divineGift,
+        past_lives: pastLives,
+        mission: mission,
+        obstacle: obstacle
     };
 
-    // Display result in JSON format
+    // Mostrar resultado en JSON
     const outputContent = document.getElementById("outputContent");
     outputContent.textContent = JSON.stringify(numerologyResult, null, 4);
+
+    // Enviar datos a SheetDB
+    try {
+        const response = await fetch(SHEETDB_API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ data: numerologyResult })
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Error al guardar en SheetDB: ${response.status} - ${errorText}`);
+        }
+
+        // Si todo OK, cerrar sidebar
+        toggleSidebar();
+
+        // Disparar evento custom para recargar datos en frontend
+        window.dispatchEvent(new Event('peopleUpdated'));
+
+    } catch (error) {
+        console.error(error);
+        showError("Error al registrar la numerología");
+    }
 }
 
-// Copy JSON result to clipboard
+// Copiar resultado JSON al portapapeles
 function copyToClipboard() {
     const outputContent = document.getElementById("outputContent").textContent;
     navigator.clipboard.writeText(outputContent).then(() => {
@@ -67,3 +127,8 @@ function copyToClipboard() {
         console.error("Error al copiar el texto: ", err);
     });
 }
+
+// Exportar funciones para acceso global
+window.toggleSidebar = toggleSidebar;
+window.calculateNumerology = calculateNumerology;
+window.copyToClipboard = copyToClipboard;
