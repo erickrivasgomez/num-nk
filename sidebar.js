@@ -122,7 +122,7 @@ async function calculateNumerology(event) {
 function copyToClipboard() {
     const outputContent = document.getElementById("outputContent").textContent;
     navigator.clipboard.writeText(outputContent).then(() => {
-        console.log("Resultado copiado al portapapeles");
+        
     }).catch(err => {
         console.error("Error al copiar el texto: ", err);
     });

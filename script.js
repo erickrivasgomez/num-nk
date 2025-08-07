@@ -1,17 +1,17 @@
 
 
 async function fetchPeople() {
-    console.log("[fetchPeople] Iniciando petición a SheetDB...");
+    
     try {
         const response = await fetch(SHEETDB_API_URL);
-        console.log("[fetchPeople] Status de respuesta:", response.status);
+        
         if (!response.ok) {
             const errorText = await response.text();
             console.error("[fetchPeople] Error en la respuesta:", errorText);
             throw new Error(`Error al cargar datos: ${response.status} - ${errorText}`);
         }
         const peopleData = await response.json();
-        console.log("[fetchPeople] Datos recibidos:", peopleData);
+        
         
         // Aquí está el fix
         return Array.isArray(peopleData) ? peopleData : (peopleData.data || []);
@@ -23,12 +23,12 @@ async function fetchPeople() {
 
 
 async function init() {
-    console.log("[init] Inicializando app...");
+    
     try {
         const response = await fetch('descriptions.json');
         if (!response.ok) throw new Error('Error cargando descriptions.json');
         const data = await response.json();
-        console.log("[init] Descripciones cargadas correctamente.");
+        
 
         const esenciaDescriptions = data.esenciaDescriptions;
         const karmaDescriptions = data.karmaDescriptions;
@@ -38,7 +38,7 @@ async function init() {
         const obstaculoDescriptions = data.obstaculoDescriptions;
 
         const people = await fetchPeople();
-        console.log("[init] Personas obtenidas:", people);
+        
 
         if (people.length === 0) {
             console.warn("[init] No se encontraron personas.");
@@ -47,11 +47,11 @@ async function init() {
 
         // Ordenar personas alfabéticamente
         people.sort((a, b) => a.name.localeCompare(b.name));
-        console.log("[init] Personas ordenadas:", people);
+        
 
         // Generar grupos únicos
         const groups = [...new Set(people.map(person => person.group || person.grupo))];
-        console.log("[init] Grupos únicos encontrados:", groups);
+        
 
         // Crear tabs
         const tabsContainer = document.getElementById('tabs');
@@ -67,7 +67,7 @@ async function init() {
             tab.onclick = () => filterCards(group);
             tabsContainer.appendChild(tab);
         });
-        console.log("[init] Tabs creados correctamente.");
+        
 
         const cardsContainer = document.getElementById('cards-container');
         if (!cardsContainer) {
@@ -76,10 +76,10 @@ async function init() {
         }
 
         function createCards(group) {
-            console.log("[createCards] Mostrando grupo:", group);
+            
             cardsContainer.innerHTML = '';
             const filtered = people.filter(person => (person.group || person.grupo) === group);
-            console.log(`[createCards] Personas en grupo '${group}':`, filtered);
+            
 
             filtered.forEach(person => {
                 const card = document.createElement("div");
@@ -121,7 +121,7 @@ async function init() {
         }
 
         function filterCards(group) {
-            console.log("[filterCards] Filtrando grupo:", group);
+            
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
             const activeTab = Array.from(document.querySelectorAll('.tab')).find(tab => tab.innerText === group);
             if (activeTab) {
@@ -131,7 +131,7 @@ async function init() {
         }
 
         if (groups.length > 0) {
-            console.log("[init] Inicializando con grupo:", groups[0]);
+            
             filterCards(groups[0]);
         } else {
             console.warn("[init] No hay grupos para mostrar.");
@@ -147,6 +147,6 @@ async function init() {
 init();
 
 window.addEventListener('peopleUpdated', () => {
-    console.log("[event] Evento peopleUpdated recibido: recargando datos...");
+    
     init();
 });
