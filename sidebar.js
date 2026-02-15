@@ -1,5 +1,5 @@
 // sheetdb-config.js
-const SHEETDB_API_URL = "https://sheetdb.io/api/v1/iq7ptk9iytmbx"; 
+const SHEETDB_API_URL = "https://sheetdb.io/api/v1/iq7ptk9iytmbx";
 // Reemplaza con tu endpoint real
 
 // Toggle Sidebar Visibility
@@ -122,7 +122,7 @@ async function calculateNumerology(event) {
 function copyToClipboard() {
     const outputContent = document.getElementById("outputContent").textContent;
     navigator.clipboard.writeText(outputContent).then(() => {
-        
+
     }).catch(err => {
         console.error("Error al copiar el texto: ", err);
     });
@@ -134,6 +134,35 @@ window.toggleSidebar = toggleSidebar;
 window.calculateNumerology = calculateNumerology;
 window.copyToClipboard = copyToClipboard;
 
+function switchTab(tabName) {
+    // Hide all tab contents
+    const contents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < contents.length; i++) {
+        contents[i].classList.remove("active");
+    }
+
+    // Remove active class from all buttons
+    const tabs = document.getElementsByClassName("tab-link");
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById("tab-" + tabName).classList.add("active");
+
+    // Find button that calls this function with this tabName (simple approach) or just iterate
+    // Since we pass the name, we can just find which button corresponds. 
+    // Actually, event.target would be better but let's just loop for simplicity in finding the matching button text or index
+    // Better way:
+    const buttons = document.querySelectorAll(`.tab-link`);
+    buttons.forEach(btn => {
+        if (btn.getAttribute('onclick').includes(tabName)) {
+            btn.classList.add('active');
+        }
+    });
+}
+window.switchTab = switchTab;
+
 /* --- BULK ADD LOGIC --- */
 
 let parsedBulkData = [];
@@ -141,7 +170,7 @@ let parsedBulkData = [];
 function parseBulkInput(text) {
     const lines = text.split('\n').filter(line => line.trim() !== '');
     const results = [];
-    
+
     // Regex para fechas DD/MM/YYYY o DD-MM-YYYY o D/M/YYYY
     // Captura: Group 1=Day, Group 2=Month, Group 3=Year
     const dateRegex = /\b(\d{1,2})[./-](\d{1,2})[./-](\d{2,4})\b/;
@@ -156,7 +185,7 @@ function parseBulkInput(text) {
             originalDateStr = match[0];
             name = line.replace(originalDateStr, '').trim(); // El nombre es todo menos la fecha
             // Limpiar caracteres extra del nombre si quedaron
-            name = name.replace(/[\t,;]+$/, '').trim(); 
+            name = name.replace(/[\t,;]+$/, '').trim();
 
             day = parseInt(match[1]);
             month = parseInt(match[2]);
@@ -169,7 +198,7 @@ function parseBulkInput(text) {
             day = today.getDate();
             month = today.getMonth() + 1; // 0-indexed
             year = today.getFullYear();
-            
+
             name = line.trim();
             originalDateStr = "(Hoy)";
             status = 'Auto-Date';
@@ -194,7 +223,7 @@ function parseBulkInput(text) {
     return results;
 }
 
-window.previewBulk = function() {
+window.previewBulk = function () {
     const rawText = document.getElementById('bulkInput').value;
     const bulkGroup = document.getElementById('bulkGroup').value.trim();
     const previewContainer = document.getElementById('bulkPreview');
@@ -211,7 +240,7 @@ window.previewBulk = function() {
     }
 
     parsedBulkData = parseBulkInput(rawText);
-    
+
     if (parsedBulkData.length === 0) {
         previewContainer.innerHTML = '<p>No se encontraron datos válidos.</p>';
         btnSubmit.style.display = 'none';
@@ -220,7 +249,7 @@ window.previewBulk = function() {
 
     let html = '<table class="preview-table">';
     html += '<thead><tr><th>Nombre</th><th>Fecha</th><th>Estado</th></tr></thead><tbody>';
-    
+
     parsedBulkData.forEach(item => {
         const rowClass = item.status === 'OK' ? 'row-ok' : 'row-warning';
         html += `<tr class="${rowClass}">
@@ -229,7 +258,7 @@ window.previewBulk = function() {
             <td>${item.status}</td>
         </tr>`;
     });
-    
+
     html += '</tbody></table>';
     html += `<p>Total detectados: <strong>${parsedBulkData.length}</strong></p>`;
 
@@ -237,9 +266,9 @@ window.previewBulk = function() {
     btnSubmit.style.display = 'block';
 };
 
-window.submitBulk = async function() {
+window.submitBulk = async function () {
     const bulkGroup = document.getElementById('bulkGroup').value.trim();
-    
+
     if (!bulkGroup || parsedBulkData.length === 0) {
         return;
     }
@@ -247,7 +276,7 @@ window.submitBulk = async function() {
     // Calcular numerología para cada uno
     const payloadData = parsedBulkData.map(item => {
         const [year, month, day] = item.birthdate.split('-').map(Number);
-        
+
         const essence = calculateEssence(day);
         const karma = calculateKarma(month);
         const divineGift = calculateDivineGift(year);
@@ -291,7 +320,7 @@ window.submitBulk = async function() {
 
         // Éxito
         alert(`¡Se han cargado ${payloadData.length} registros exitosamente!`);
-        
+
         // Limpiar formulario masivo
         document.getElementById('bulkInput').value = '';
         document.getElementById('bulkGroup').value = '';

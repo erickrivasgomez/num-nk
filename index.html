@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="sidebar.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Resultados de Numerología</h1>
@@ -22,40 +24,50 @@
         <button class="toggle" onclick="toggleSidebar()">☰</button>
         <div class="sidebar-content">
             <h2>Formulario de Numerología</h2>
-            <form id="numerologyForm" onsubmit="calculateNumerology(event)">
+
+            <div class="sidebar-tabs">
+                <button class="tab-link active" onclick="switchTab('individual')">Individual</button>
+                <button class="tab-link" onclick="switchTab('bulk')">Masivo</button>
+            </div>
+
+            <div id="tab-individual" class="tab-content active">
+                <form id="numerologyForm" onsubmit="calculateNumerology(event)">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">Fecha de Nacimiento:</label>
+                        <input type="date" id="birthDate" name="birthDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="group">Grupo:</label>
+                        <input type="text" id="group" name="group" required>
+                    </div>
+                    <button type="submit">Calcular</button>
+                </form>
+                <div id="output" class="output">
+                    <button class="copy-button" onclick="copyToClipboard()">📋 Copiar</button>
+                    <pre id="outputContent"></pre>
+                </div>
+            </div>
+
+            <div id="tab-bulk" class="tab-content">
+                <h3>Carga Masiva</h3>
                 <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="bulkGroup">Grupo para todos:</label>
+                    <input type="text" id="bulkGroup" placeholder="Ej: Clase 2026">
                 </div>
                 <div class="form-group">
-                    <label for="birthDate">Fecha de Nacimiento:</label>
-                    <input type="date" id="birthDate" name="birthDate" required>
+                    <label for="bulkInput">Pegar lista (Nombre Fecha):</label>
+                    <textarea id="bulkInput" rows="6" placeholder="Ej: Juan Perez 20/05/1990"></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="group">Grupo:</label>
-                    <input type="text" id="group" name="group" required>
-                </div>
-                <button type="submit">Calcular</button>
-            </form>
-            <div id="output" class="output">
-                <button class="copy-button" onclick="copyToClipboard()">📋 Copiar</button>
-                <pre id="outputContent"></pre>
+                <button type="button" onclick="window.previewBulk()">Verificar Datos</button>
+                <div id="bulkPreview" class="bulk-preview"></div>
+                <button id="btnBulkSubmit" type="button"
+                    style="display:none; margin-top:10px; background-color: #28a745;"
+                    onclick="window.submitBulk()">Guardar Todos</button>
             </div>
-            
-            <hr>
-            
-            <h3>Carga Masiva</h3>
-            <div class="form-group">
-                <label for="bulkGroup">Grupo para todos:</label>
-                <input type="text" id="bulkGroup" placeholder="Ej: Clase 2026">
-            </div>
-            <div class="form-group">
-                <label for="bulkInput">Pegar lista (Nombre Fecha):</label>
-                <textarea id="bulkInput" rows="6" placeholder="Ej: Juan Perez 20/05/1990"></textarea>
-            </div>
-            <button type="button" onclick="window.previewBulk()">Verificar Datos</button>
-            <div id="bulkPreview" class="bulk-preview"></div>
-            <button id="btnBulkSubmit" type="button" style="display:none; margin-top:10px; background-color: #28a745;" onclick="window.submitBulk()">Guardar Todos</button>
         </div>
     </div>
 
@@ -64,4 +76,5 @@
     <script type="module" src="sidebar.js"></script>
 
 </body>
+
 </html>

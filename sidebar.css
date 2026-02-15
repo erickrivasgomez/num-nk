@@ -37,6 +37,60 @@
 
 .sidebar-content {
     padding: 15px;
+    flex: 1;
+    overflow-y: auto;
+    /* Enable scrolling */
+}
+
+/* Tab Styles */
+.sidebar-tabs {
+    display: flex;
+    border-bottom: 2px solid #555;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #ccc;
+    font-weight: bold;
+    flex: 1;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-link.active {
+    color: #fff;
+    border-bottom: 2px solid #c89412;
+    /* Gold accent */
+}
+
+.tab-content {
+    display: none;
+    animation: fadeEffect 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .form-group {
@@ -49,7 +103,8 @@ label {
     font-size: 14px;
 }
 
-input[type="text"], input[type="date"] {
+input[type="text"],
+input[type="date"] {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
