@@ -5,7 +5,8 @@
     left: 20px;
     width: 250px;
     height: 90vh;
-    background-color: #333;
+    margin-top: 10px;
+    background-color: #6c757d;
     color: #fff;
     display: flex;
     flex-direction: column;
